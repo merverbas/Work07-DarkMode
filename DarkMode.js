@@ -1,18 +1,17 @@
 const darkButton = document.querySelectorAll("button")[0];
-const Newbody = document.querySelector("body");
+const newBody = document.body;
 
 darkButton.addEventListener("click" , function(){
     darkButton.classList.toggle("dark");
+    newBody.classList.toggle("darkmode");
 
-    if(darkButton.classList.contains("dark")){
-        Newbody.style = 'background-color : #000000 ; color : #ffffff ';
+    if(darkButton.classList.contains("dark")){        
         darkButton.innerText = "Aydınlık Mod"
     }
     else{
-        Newbody.style = 'background-color : #ffffff ; color : #000000 ';
         darkButton.innerText = "Karanlık Mod";
 
     }  
-    console.log(darkButton);
+    console.log(newBody);
     
 });
